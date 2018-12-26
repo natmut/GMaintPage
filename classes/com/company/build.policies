@@ -1,0 +1,7 @@
+#Format --> GRAPHFILE=PATHGENERATOR;SEVERITYFLAG;PATHGENERATOR1;SEVERITYFLAG1;...
+
+Vlan11.json=random(edge_coverage(100));I;
+
+MaintPageLogin.json=random(edge_coverage(100));I;shortest_all_paths (edge_coverage(100));I;
+
+
