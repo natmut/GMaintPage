@@ -11,9 +11,6 @@ public interface MaintPageLogin {
     @Edge()
     void e_ValidLogin();
 
-    @Edge()
-    void e_CloseBrowser();
-
     @Vertex()
     void v_FailurePage();
 
@@ -30,5 +27,29 @@ public interface MaintPageLogin {
     void v_successfulLogin();
 
     @Vertex()
+    void v_pingP2();
+
+    @Edge()
+    void e_openPingPage();
+
+    @Vertex()
     void v_LoginPage();
+
+    @Edge()
+    void e_pingP2();
+
+    @Edge()
+    void e_ping_EGC();
+
+    @Edge()
+    void e_CloseBrowser();
+
+    @Vertex()
+    void v_pingEGC();
+
+    @Vertex()
+    void v_pingPage();
+
+    @Edge()
+    void e_goBackToPing();
 }

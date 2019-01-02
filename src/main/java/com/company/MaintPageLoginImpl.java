@@ -127,4 +127,46 @@ public class MaintPageLoginImpl extends ExecutionContext implements MaintPageLog
 
 	}
 
+	@Override
+	public void v_pingP2() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void e_openPingPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void e_pingP2() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void e_ping_EGC() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void v_pingEGC() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void v_pingPage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void e_goBackToPing() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
