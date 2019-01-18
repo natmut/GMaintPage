@@ -136,19 +136,72 @@ public class MaintPageLoginImpl extends ExecutionContext implements MaintPageLog
 	@Override
 	public void e_openPingPage() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Executing:e_OpenPingPage");
+		WebElement sysstatus = BrowserProxyUtils.getInstance()
+				.findElement(By.xpath("//*[@id='form:accordion']/h3[4]/a"));
+		System.out.println(sysstatus.getText());
+		Actions builder = new Actions(BrowserProxyUtils.getInstance());
+		builder.moveToElement(sysstatus).click().perform();
+		BrowserProxyUtils.getWaiter().until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//a[@class='fonts' and contains(@onclick,'form:accordion:j_idt50')]")))
+				.click();
+		BrowserProxyUtils.getWaiter().until(
+				ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='form:tabView:lrulist']/ul/li[4]/div")))
+				.click();
+		BrowserProxyUtils.getWaiter()
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='form:tabView:num_pings']")))
+				.clear();
+		BrowserProxyUtils.getWaiter()
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='form:tabView:num_pings']")))
+				.sendKeys("5");
+		BrowserProxyUtils.getInstance().findElement(By.xpath("//*[@id='form:tabView:BtnStartTest']/span[2]")).click();
+
+		BrowserProxyUtils.getWaiter()
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='form:tabView:Btnhistory']/span[2]")))
+				.click();
+
 	}
 
 	@Override
 	public void e_pingP2() {
 		// TODO Auto-generated method stub
-		
+		BrowserProxyUtils.getWaiter().until(
+				ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='form:tabView:lrulist']/ul/li[4]/div")))
+				.click();
+		BrowserProxyUtils.getWaiter()
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='form:tabView:num_pings']")))
+				.sendKeys("5");
+		BrowserProxyUtils.getInstance().findElement(By.xpath("//*[@id='form:tabView:BtnStartTest']/span[2]")).click();
 	}
+
 
 	@Override
 	public void e_ping_EGC() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Executing:e_OpenPingPage");
+		WebElement sysstatus = BrowserProxyUtils.getInstance()
+				.findElement(By.xpath("//*[@id='form:accordion']/h3[4]/a"));
+		System.out.println(sysstatus.getText());
+		Actions builder = new Actions(BrowserProxyUtils.getInstance());
+		// builder.moveToElement(sysstatus).click().perform();
+		BrowserProxyUtils.getWaiter().until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//a[@class='fonts' and contains(@onclick,'form:accordion:j_idt50')]")))
+				.click();
+		BrowserProxyUtils.getWaiter()
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='form:tabView:lrulist']/ul/li[1]")))
+				.click();
+		BrowserProxyUtils.getWaiter()
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='form:tabView:num_pings']")))
+				.clear();
+		BrowserProxyUtils.getWaiter()
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='form:tabView:num_pings']")))
+				.sendKeys("5");
+		BrowserProxyUtils.getInstance().findElement(By.xpath("//*[@id='form:tabView:BtnStartTest']/span[2]")).click();
+
+		BrowserProxyUtils.getWaiter()
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='form:tabView:Btnhistory']/span[2]")))
+				.click();
+
 	}
 
 	@Override
