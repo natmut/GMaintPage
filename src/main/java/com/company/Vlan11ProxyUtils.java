@@ -23,8 +23,8 @@ public class Vlan11ProxyUtils {
 
 				static {
 					// Set HTTP Port as below
-					p.setHttpProxy("jarjar.virtual.lru.gogoair.com:5301");
-					p.setSslProxy("jarjar.virtual.lru.gogoair.com:5301");
+					p.setHttpProxy("obiwan.virtual.lru.gogoair.com:2301");
+					p.setSslProxy("obiwan.virtual.lru.gogoair.com:2301");
 					// Pass proxy object p
 					cap.setCapability(CapabilityType.PROXY, p);
 				}
@@ -41,7 +41,7 @@ public class Vlan11ProxyUtils {
 	}
 
 	public static WebDriverWait getWaiter() {
-		return new WebDriverWait(getInstance(), 20);
+		return new WebDriverWait(getInstance(), 25);
 	}
 
 	public static WebDriver getInstance() {

@@ -17,7 +17,7 @@ public class BrowserProxyUtils {
 
 		static {
 			// Set HTTP Port as below
-			p.setHttpProxy("r2d2.virtual.lru.gogoair.com:9084");
+			p.setHttpProxy("obiwan.virtual.lru.gogoair.com:2084");
 			// Pass proxy object p
 			cap.setCapability(CapabilityType.PROXY, p);
 		}

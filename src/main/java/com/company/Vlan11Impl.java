@@ -38,6 +38,7 @@ public class Vlan11Impl extends ExecutionContext implements Vlan11 {
 	@Override
 	public void e_CloseBrowser() {
 		System.out.println("Executing:e_CloseBrowser");
+		Vlan11ProxyUtils.tearDown();
 	}
 
 	@Override
